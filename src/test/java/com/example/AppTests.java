@@ -10,17 +10,28 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * Test class for the App class.
+ */
 @SpringBootTest
 @AutoConfigureMockMvc
 public class AppTests {
 
+    /**
+     * MockMvc instance for performing HTTP requests in tests.
+     */
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * Test the hello endpoint.
+     *
+     * @throws Exception if an error occurs during the test
+     */
     @Test
     public void testHelloEndpoint() throws Exception {
         mockMvc.perform(get("/"))
                .andExpect(status().isOk())
-               .andExpect(content().string("Hello, Gradle"));
+               .andExpect(content().string("Hello, Gradle)"));
     }
 }
