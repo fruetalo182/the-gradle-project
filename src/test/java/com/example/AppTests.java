@@ -14,13 +14,21 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class AppTests {
 
+    /**
+     * MockMvc instance used to perform HTTP requests in tests.
+     */
     @Autowired
     private MockMvc mockMvc;
 
+    /**
+     * Ensure it returns a 200 status and the correct content.
+     *
+     * @throws Exception if the request fails
+     */
     @Test
     public void testHelloEndpoint() throws Exception {
         mockMvc.perform(get("/"))
                .andExpect(status().isOk())
-               .andExpect(content().string("Hello, Gradle"));
+               .andExpect(content().string("Hello, Gradle!"));
     }
 }
