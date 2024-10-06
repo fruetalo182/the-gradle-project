@@ -19,10 +19,9 @@ public class App {
      *
      * @param args command-line arguments.
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         SpringApplication.run(App.class, args);
     }
-
 
     /**
      * REST endpoint that returns a greeting message.
