@@ -5,6 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+
+import java.io.IOException;
+
+
 /**
  * Main application class for the Spring Boot application.
  *
@@ -24,12 +32,13 @@ public class App {
     }
 
     /**
-     * REST endpoint that returns a greeting message.
+     * REST endpoint that returns Travis image.
      *
      * @return a greeting string.
      */
-    @GetMapping("/")
-    public String hello() {
-        return "Hello, Gradle!";
+    @GetMapping(value = "/", produces = MediaType.IMAGE_JPEG_VALUE)
+    public ResponseEntity<Resource> getImage() throws IOException {
+        Resource resource = new ClassPathResource("travis_real.png");
+        return ResponseEntity.ok().body(resource);
     }
 }
