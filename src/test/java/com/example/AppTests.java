@@ -10,12 +10,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
-
-import java.io.IOException;
 
 @SpringBootTest
 @AutoConfigureMockMvc
