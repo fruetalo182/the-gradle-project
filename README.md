@@ -60,6 +60,4 @@ To run the Travis Gradle application using Docker, follow these steps:
 
 3. **Access the application** at [http://localhost:8080](http://localhost:8080).
 
-## 📸 Screenshots
-![Hoppus](src/main/resources/travis_real.png)
 
