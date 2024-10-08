@@ -29,15 +29,15 @@
 1. Clone this repository:
     ```bash
     git clone https://github.com/fruetalo182/travis-gradle.git
-    cd maven-hoppus
+    cd travis-gradle
     ```
-2. Build the application:
+2. Test the application:
     ```bash
-    mvn clean package
+    ./gradlew test
     ```
 3. Run the application:
     ```bash
-    mvn spring-boot:run
+    ./gradlew bootRun
     ```
 4. Open your browser at [http://localhost:8080](http://localhost:8080) to access.
 
