@@ -85,5 +85,5 @@ jobs:
     - name: Release .jar artifact
       uses: softprops/action-gh-release@v2
       with:
-        files: build/libs/the-gradle-project-1.0-SNAPSHOT.jar
+        files: build/libs/travis-gradle-1.0-SNAPSHOT.jar
         tag_name: v${{ env.MAJOR_V }}.${{ env.MINOR_V }}.${{ env.PATCH_V }}-${{ github.run_number }}
