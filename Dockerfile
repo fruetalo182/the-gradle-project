@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jre-jammy as builder
 WORKDIR /app
 
 # Copy the jar file into the container
-COPY build/libs/the-gradle-project-1.0-SNAPSHOT.jar app.jar
+COPY build/libs/travis-gradle-1.0-SNAPSHOT.jar app.jar
 
 # Extract the jar to improve layer caching
 RUN java -Djarmode=layertools -jar app.jar extract
